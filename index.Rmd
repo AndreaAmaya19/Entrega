@@ -1,0 +1,41 @@
+---
+title       : Presentacion1
+subtitle    : 
+author      : Andrea A
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+
+## Tabla de marcadores
+
+```{r, echo=F, include=T}
+library(ggplot2)
+library(knitr)
+data("iris")
+kable(head(iris))
+```
+
+---
+
+
+## Insertar Una Imagen Estatica
+
+![Mi Primera Imagen](pi.jpg)
+
+---
+
+## insertar grafico en ggplot
+
+```{r, echo=F, include=T}
+str(iris)
+library(ggplot2)
+ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, fill = Species, col = Species)) +
+  geom_point() 
+
+```
